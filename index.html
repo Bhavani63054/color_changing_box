@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Box</title>
+</head>
+<body>
+    <script>
+        const box = document.createElement('div');
+        box.style.width = '200px';
+        box.style.height = '200px';
+        box.style.margin = '50px auto';
+        box.style.backgroundColor = 'red'; 
+        document.body.appendChild(box);
+        const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+        let colorIndex = 0;
+        setInterval(() => {
+            box.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }, 1000);
+    </script>
+</body>
+</html>
